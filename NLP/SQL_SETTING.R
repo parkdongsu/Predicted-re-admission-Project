@@ -21,16 +21,20 @@ workingFolder<-"D:/Dongsu/R_code/sql"
 setwd(workingFolder)
 
 connectionDetails<-DatabaseConnector::createConnectionDetails(dbms="sql server",
-                                                              server="128.1.99.58",
-                                                              schema="Dolphin_CDM.dbo",
-                                                              user="atlas",
-                                                              password="qwer1234!@")
+                                                              server="###.###.###.###",
+                                                              schema="#########.dbo",
+                                                              user="#####",
+                                                              password="#######")
 connection <- DatabaseConnector::connect(connectionDetails)
+
+
+
+
 connectionDetails <-connectionDetails
 connection <- connection
 
-cdmDatabaseSchema<-"Dolphin_CDM.dbo" 
-targetDatabaseSchema<-"Dolphin_CDM.dbo"
+cdmDatabaseSchema<-"#######.dbo" 
+targetDatabaseSchema<-"#######.dbo"
 targetCohortTable<-"cohort"
 targetCohortId <- 747
 outcomeCohortId <- 748

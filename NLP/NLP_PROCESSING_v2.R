@@ -202,3 +202,7 @@ doc.df <- data.frame(c(search_df['NOTE_ID'],doc.tmp_df,search_df['outcomeCount']
 
 #colname 지정
 colnames(doc.df) <- colnames(doc.df) <- c('NOTE_ID','NOTE_TEXT','outcomeCount')
+
+
+# 클러스터 중지
+parallel::stopCluster(myCluster)

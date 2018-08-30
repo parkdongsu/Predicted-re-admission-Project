@@ -46,7 +46,6 @@ for(i in 1:length(engram_list)){
     engram3_list[[i]] <- paste(en_gram3,last_sentence)
     }
     else if (nchar(gsub("[^ ]",'',engram_list[[i]])) == 3){
-        print(i)
         pos_start <- as.vector(gregexpr(' ',engram_list[[i]])[[1]]) # 정규표현식을 통해 걸러서 사용
         en_gram3 <- gsub(' ','',substr(engram_list[[i]],1,(pos_start[3]-1)))
         last_sentence <-  gsub(' ','',substr(engram_list[[i]],(pos_start[length(pos_start)-2]+1),nchar(engram_list[[i]])))
